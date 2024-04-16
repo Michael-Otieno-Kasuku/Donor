@@ -1,0 +1,22 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/past_events.css' %}">
+<div class="container">
+    <h2>Past Events</h2>
+    {% if past_events %}
+        <ul class="event-list">
+            {% for event in past_events %}
+                <li class="event-card">
+                    <div class="event-details">
+                        <h3>{{ event }}</h3>
+                        <!-- You can add more details here if needed -->
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-events">No past events available.</p>
+    {% endif %}
+</div>
+{% endblock %}

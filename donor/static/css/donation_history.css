@@ -1,0 +1,33 @@
+/* donation_history.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.donation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.donation-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.no-donations {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}

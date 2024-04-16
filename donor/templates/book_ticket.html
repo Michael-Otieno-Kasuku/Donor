@@ -1,0 +1,22 @@
+<!-- book_ticket.html -->
+
+{% extends 'base_dashboard.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/book_ticket.css' %}">
+<div class="container">
+    <div class="booking-form">
+        <h2>Book Blood Donation Ticket</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="future_event">Select Event:</label>
+                {{ form.future_event_id }}
+            </div>
+            <button type="submit" class="btn-primary">Book Ticket</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

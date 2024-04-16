@@ -1,0 +1,20 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/donation_history.css' %}">
+<div class="container">
+    <h2>Donation History</h2>
+    {% if donation_history %}
+        <ul class="donation-list">
+            {% for donation in donation_history %}
+                <li class="donation-item">
+                    <h3>{{ donation.past_event_id }}</h3>
+                    <!-- Add more details as needed -->
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-donations">No donation history available.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base_dashboard.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="{% static 'img/blood-drop.jpeg' %}" alt="Blood Drop">
+        </div>
+        <nav class="navigation" role="navigation" aria-label="Main Navigation">
+            <a href="{% url 'book_ticket' %}" class="nav-item">Donate Blood</a>
+            <a href="{% url 'future_events' %}" class="nav-item">Future Events</a>
+            <a href="{% url 'past_events' %}" class="nav-item">Past Events</a>
+            <a href="{% url 'donation_history' %}" class="nav-item">Donation History</a>
+            <a href="{% url 'logout' %}" class="nav-item">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="tagline">Welcome to EDonor</h1>
+                <p>Donate blood and save lives!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-copyright">
+            &copy; 2024 EDonor. All Rights Reserved.
+        </div>
+    </footer>
+{% endblock %}

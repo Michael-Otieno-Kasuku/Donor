@@ -1,0 +1,14 @@
+<!-- booking_success.html -->
+
+{% extends 'base_dashboard.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/booking_success.css' %}">
+<div class="container">
+    <div class="success-message">
+        <h2>Booking Successful!</h2>
+        <p>Your ticket number is: <strong>{{ ticket_number }}</strong></p>
+        <button onclick="window.print()" class="btn-print">Print Receipt</button>
+    </div>
+</div>
+{% endblock %}
